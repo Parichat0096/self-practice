@@ -1,0 +1,9 @@
+-Arrayกับobject มีความเหมือนกันคือเก็บค่าได้หลายค่าแต่ต่างกันตรงที่arrayมีลำดับแต่objectจะเก็บvalueและkey
+-arrayเป็น dynamic type
+-ได้ทบทวนพวกคำสั่งที่ใช้เพื่อเข้าarray เช่น push,pop
+-รู้วิธีใช้ spread operator เพื่อกระจายข้อมูลจาก Array เดิมไปรวมกับข้อมูลอื่น
+-วิธีสร้างarrayแบบconstructor
+-การใช้destructuring ในการแยกโครงสร้างของarray
+
+ปล. ที่ใช้ai
+ใช้แก้โจทย์ข้อprint every items in arrayที่อ.ให้เขียนลูป แก้โจทย์ข้อที่ อ.ให้เพิ่มelementให้array ข้อที่ให้ลดขนาดarray
