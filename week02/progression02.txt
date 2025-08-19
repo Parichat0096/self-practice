@@ -1,0 +1,12 @@
+
+-Object เก็บได้หลายค่าแต่ต่างกับarrayตรงที่ไม่มีลำดับและเก็บข้อมูลที่เป็นkeyกับvalue
+- Object เป็นdynamic สามารถเพิ่มลดpropertiesได้
+- Objectไม่ได้เก็บข้อมูลโดยตรงแต่เก็บreferrenceของaddress
+- json เป็น text file รูปแบบนึง เก็บได้ทุกอย่างหมือนjsแต่ไม่เก็บfunction
+
+ปล.ใช้chatgptช่วยอธิบายเพิ่มเติมนิดหน่อย
+- การสร้างobjectมี4แบบหลักๆ  1.literals เป็นง่ายและเขียนได้ไวที่สุด คือประกาศตัวแปร ใส่ปีกกาแล้วสร้างobjectได้เลย
+ แต่ถ้าเขียนหลายๆObjectก็จะไม่ค่อยสะดวก 2.Constructor functions ใช้function+thisเป็นแม่แบบ แล้ว
+ สร้างobjectใหม่ด้วยnew จะเหมาะกับการสร้างobjectที่มีpropertiesและmethodเหมือนกัน 3.ES6 class จะมีการสร้างแม่แบบเหมือน
+ Constructor functionsแต่จะใช้ class+Constructor ซึ่งจะอ่านง่ายและชัดเจนกว่า 4.Object.create() ใช้ในการอ้างอิง
+ การสร้างobjectจากobjectอื่น
