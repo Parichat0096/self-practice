@@ -1,0 +1,15 @@
+-functionคือชุดคำสั่งของjsที่ประกาศแค่ครั้งเดียวแต่สามารถเรียกใช้ได้หลายครั้งตามความต้องการ
+-Function Declarationsคือวิธีการสร้างฟังก์ชันโดยใช้คำสั่ง function ตามด้วยชื่อฟังก์ชัน รายการพารามิเตอร์
+    และบล็อกคำสั่งของฟังก์ชัน สามารถใช้คุณสมบัติคือhoistedได้ (ปล.ใช้ai)
+-higher-order functionเป็นfunctionที่รับfunctionอื่นเป็นparameter
+-Arrow Function Expressions เป็นรูปแบบของ Function Expressions ใน JavaScript ที่เขียนสั้นลงและทำงาน
+    เหมือนฟังก์ชันปกติ แต่มีข้อแตกต่างเรื่อง this คือไม่สามารถอ้างthisได้และโครงสร้างการเขียน (ปล.ใช้ai)
+-การใช้ arguments และ rest parameter
+-Default Parameters คือการที่เรากำหนดตัวแปรขึ้นมาเพื่อเป็นค่าตัวแปรเริ่มต้น ถ้ามีการinput parameterก็จะใช้ค่าinputนั้น
+    เป็นparameterแต่ถ้าไม่มีก็จะใช้ค่าตัวแปรเริ่มต้นที่เรากำหนดเป็นparameter
+-if typeที่ได้จากการtest if เป็นtypeิ boolean
+
+
+สิ่งที่ถามaiเพิ่มเติม
+-ความหมายและโครงสร้างพื้นฐานของreduce
+-splitเป็นmethodของstringเพื่อแยกstringเป็นarray
