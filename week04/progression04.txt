@@ -1,0 +1,13 @@
+-การเขียนfunction callbackf syntax แบบที่1 anonymous arrow function 2.nonymous function declaration
+    3.name arrow function 4.name function declaration
+-anonymous function เป็นfunction ที่ไม่มีชื่อ
+-method array แบ่งเป็น5แบบใหญ่ๆ 1.คือiterator methodกลุ่มนี้จะใช้บ่อยที่สุด 2.Stack and Queueเป็นMethodsที่จัดการ
+    เกี่ยวกับการเข้าคิว 3.Subarray เป็นกลุ่มMethodที่ใช้จัดการเรื่องการลบ เพิ่ม หรือกรอง สมาชิกใรarray 
+    4.Searching and Sorting เป็นกลุ่มMethodใช้สำหรับเรียงหรือค้นหาข้อมูล 5.จะเป็นกลุ่มเกี่ยวกับการแปลง
+    Array ไปเป็น String 
+
+
+ปล.ใช้aiช่วยอธิบาย
+-ความแตกต่างระหว่างletกับconst
+    let ใช้เก็บค่าที่เปลี่ยนใหม่ได้
+    const ใช้เก็บค่าคงที่ หรือค่าที่เปลี่ยนไม่ได้
