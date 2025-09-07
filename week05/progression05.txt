@@ -1,0 +1,60 @@
+-Tree Shaking คือกระบวนการ remove code ที่ไม่ได้ใช้งานแล้ว โดยดูจากที่เราเคยติดตั้งอะไรไว้บ้างแล้วอะไรที่ไม่ได้
+    มีการเรียกใช้งาน (ใช้กับimport, export)
+-รูปแบบของ Module มี 2 แบบ คือ CommonJS (ใช้ใน Node.js)และES Modules (ใช้ได้ทั้ง Browser + Node.js รุ่นใหม่)
+-CommonJS  ใช้ require() สำหรับการimport และ module.exports สำหรับexport
+-ES Modules จะใช้ import และ export ตรงๆเลย
+-export คือการส่งออกค่าหรือfunction จากไฟล์หนึ่งไปอีกไฟล์หนึ่ง ในES Modules จะมี2แบบคือ 
+    1. Named Export ส่งออกได้หลายตัวในไฟล์เดียว เวลาจะ import ต้องเรียกชื่อให้ตรงหรือถ้าอยากเปลี่ยนชื่อก็ได้โดย
+       ใช้ as ในการเปลี่ยนชื่อ
+    2. Default Export ส่งออกได้แค่ตัวเดียวต่อไฟล์ จะเรียกชื่ออะไรก็ได้ไม่จำเป็นต้องใช้ชื่อเดิม ก็คือ ตั้งชื่อเองได้เลย
+-import คือการนำเข้าของค่าหรือfunctionที่ถูก export จากไฟล์อื่น จะใช้คู่กับ export เสมอ สามารถimportได้หลายแบบ
+    1. Named Export ต้องใช้ชื่อเหมือนกับที่ export มา (ยกเว้นใช้ as เปลี่ยนชื่อ)
+    2. Default Export ตั้งชื่ออะไรก็ได้ ไม่ต้องตรงกับชื่อที่ export
+
+ปล.ai ให้ข้อมูลเพิ่มเติม
+    3. Import ทั้ง Default + Named พร้อมกัน คือเวลาจะ import เข้ามาในอีกไฟล์ เราสามารถเอามาพร้อมกันได้เลย 
+       โดยเขียนชื่อ default ไว้ด้านหน้า แล้วตามด้วย named export ในวงเล็บปีกกา { } 
+        ตัวอย่าง
+        *data.js
+            // Default export
+            export default "Umaporn"
+
+            // Named export
+            export const subject = "INT201"
+            export function greeting() {
+              return "Hello!"
+            }
+        *main.js
+            // import ทั้ง default และ named
+            import teacher, { subject, greeting } from "./data.js"
+
+            console.log(teacher)     // Umaporn  (default export)
+            console.log(subject)     // INT201   (named export)
+            console.log(greeting())  // Hello!   (named export)
+
+                **teacher มาจาก default export (ตั้งชื่ออะไรก็ได้)
+                **subject, greeting มาจาก named export (ต้องใช้ชื่อเดิม หรือใช้ as เปลี่ยนชื่อ)
+
+
+    4. Import ทั้งหมด(as namespace) คือสามารถ import ทุกอย่างมาเก็บรวมไว้ใน “กล่องเดียว” (objectเดียว) แล้วตั้งชื่อให้กล่องนั้น เช่น box
+       จากนั้นถ้าใช้งาน ก็เรียกผ่านกล่องนี้ได้เลย 
+       ตัวอย่าง
+        *ไฟล์ math.js         
+            export const pi = 3.14
+            export function add(a, b) {
+              return a + b
+            }
+            export function sub(a, b) {
+              return a - b
+            }
+        *ไฟล์ main.js
+            // import ทุกอย่างมารวมใน object เดียวชื่อ math
+            import * as math from "./math.js"
+            console.log(math.pi)        // 3.14
+            console.log(math.add(2, 3)) // 5
+            console.log(math.sub(5, 2)) // 3
+
+                **ทุกตัวที่ export จาก math.js จะถูกรวมอยู่ใน object math
+                **ต้องเรียกใช้งานด้วย math.xxx
+
+
